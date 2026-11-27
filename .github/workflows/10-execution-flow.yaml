@@ -20,7 +20,7 @@ jobs:
               run: echo "Running tests...."
             - name: Failing Tests
               if: ${{ !inputs.pass-unit-tests }}
-              run: echo "Running tests...."
+              run: exit 1
 
     deploy-nonprod:
         runs-on: ubuntu-latest
